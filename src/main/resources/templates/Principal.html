@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class=" ms-3">
+    <div id="div1" class=" ms-3">
         <h2 class="mb-3 mt-3">El juego de la memoria</h2>
         <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Cantidad de imagenes seleccionadas :</label>
@@ -17,7 +17,7 @@
         </div>
     </div>
     <input type="file" id="fileInput" accept=".png" style="display: none;">
-    <div class="ms-3">
+    <div id="div2" class="ms-3">
         <button id="addImg" class="btn btn-success" > Agregar imagenes </button>
         <button id="start" class="btn btn-success" style="display: none" > Iniciar el juego </button>
     </div>
@@ -116,14 +116,12 @@
         }
     });
 
+    let start = document.getElementById("start");
+
+    start.addEventListener('click', ()=>{
+        document.getElementById("div1").remove();
+        document.getElementById("div2").remove();
+        document.getElementById("MasImagenes").remove();
+    });
 </script>
-<style>
-    .grid-container {
-        display: grid;
-        gap: 2px;
-        grid-template-rows: repeat(12, 50px);
-        grid-template-columns: repeat(12, 50px);
-        margin: 20px;
-    }
-</style>
 </html>
