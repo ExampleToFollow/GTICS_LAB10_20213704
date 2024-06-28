@@ -13,7 +13,6 @@
         <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Cantidad de imagenes seleccionadas :</label>
             <label class="col-sm-3 col-form-label" id="cantImagenes"> 0 </label>
-
         </div>
     </div>
     <input type="file" id="fileInput" accept=".png" style="display: none;">
@@ -114,9 +113,7 @@
             }
         }
     });
-
     let start = document.getElementById("start");
-
     start.addEventListener('click', ()=>{
         document.getElementById("div1").remove();
         document.getElementById("MasImagenes").remove();
